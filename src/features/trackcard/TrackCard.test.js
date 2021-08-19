@@ -1,11 +1,11 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
-import ChartCard, {songTime} from './ChartCard'
+import TrackCard, {songTime} from './TrackCard'
 
 function testRender() {
     return render(
-      <ChartCard />
+      <TrackCard />
     )
 }
 
@@ -24,7 +24,7 @@ describe('songTime tests', () => {
   })
 })
 
-describe('<ChartCard /> tests', () => {
+describe('<TrackCard /> tests', () => {
 
   it('renders without crashing', async () => {
     const tree = testRender()
@@ -35,7 +35,7 @@ describe('<ChartCard /> tests', () => {
   it('accepts and exibits album cover, song title, singer and duration', () => {
 
     render(
-      <ChartCard
+      <TrackCard
         cover="https://api.deezer.com/album/234349272/image"
         title="Meu Pedaço de Pecado"
         singer="João Gomes"

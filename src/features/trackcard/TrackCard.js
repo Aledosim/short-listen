@@ -7,7 +7,7 @@ export function songTime(totalTime) {
   return `${min}:${String(sec).padStart(2, "0")}`
 }
 
-export default function ChartCard(props){
+export default function TrackCard(props){
 
   return(
     <div>
