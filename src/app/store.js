@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+
+import trackListReducer from '../features/tracklist/trackListSlice'
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    trackList: trackListReducer,
   },
 });
