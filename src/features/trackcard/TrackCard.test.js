@@ -50,6 +50,20 @@ describe('<TrackCard /> tests', () => {
     expect(screen.getByText(/2:37/))
   })
 
+  it('should contain preview, info link and favorite buttons', () => {
+
+    testRender()
+
+    const buttons = screen.getAllByRole("button")
+    expect(buttons.map((button) => button.getAttribute("name")))
+      .toEqual(expect.arrayContaining(
+        [
+          "play/pause",
+          "more info",
+          "favorite"
+        ]
+      ))
+    expect(buttons.length).toEqual(3)
   })
 
 })
