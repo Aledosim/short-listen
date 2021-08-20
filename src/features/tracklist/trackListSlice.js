@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import { fetchChart } from './trackListAPI';
-import chartFixture from './__fixtures__/chartFixture'
+import chartFixture from '../../__fixtures__/chartFixture'
 
 const initialState = {
   value: [],
