@@ -10,11 +10,14 @@ export function songTime(totalTime) {
 export default function TrackCard(props){
 
   return(
-    <div>
+    <div role="listitem">
       <img alt="Album cover" src={props.cover} />
       {props.title}
       {props.singer}
       {songTime(props.time)}
+      <button name='play/pause' />
+      <button name='more info' />
+      <button name='favorite' />
     </div>
   );
 };
