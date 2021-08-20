@@ -1,7 +1,10 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, wait } from '@testing-library/react'
 import { Provider } from 'react-redux'
+import MockAdapter from 'axios-mock-adapter'
+import axios from 'axios'
 
+import chartFixture from '../../../__fixtures__/chartFixture'
 import { store } from '../../../app/store'
 import TrackList from '../TrackList'
 
@@ -41,17 +44,33 @@ jest.mock("../../trackcard/TrackCard", () => {
   }
 })
 
+const axiosMock = new MockAdapter(axios)
+const data = chartFixture
+
 describe('<TrackList /> tests', () => {
+
+  beforeEach(() => {
+    axiosMock.reset()
+    axiosMock.onGet('chart').reply(200, data);
+  })
 
   it('renders without crashing', async () => {
     const tree = testRender()
 
+    await wait(() => {
+      expect(axiosMock.history.get.length).toBe(1)
+    })
+
     expect(tree).toMatchSnapshot()
   })
 
-  it('should contain a list of tracks', () => {
+  it('should contain a list of tracks', async () => {
 
     testRender()
+
+    await wait(() => {
+      expect(axiosMock.history.get.length).toBe(1)
+    })
 
     expect(screen.getByRole("list"))
     const items = screen.getAllByRole("listitem")
