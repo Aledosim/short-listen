@@ -5,7 +5,15 @@ import TrackCard, {songTime} from './TrackCard'
 
 function testRender() {
     return render(
-      <TrackCard />
+      <TrackCard
+        cover="https://api.deezer.com/album/234349272/image"
+        title="Meu Pedaço de Pecado"
+        singer="João Gomes"
+        time={157}
+        preview="https://cdns-preview-7.dzcdn.net/stream/c-70255a40b7c438c3239e94ba0c909128-3.mp3"
+        link="https://www.deezer.com/track/1391349252"
+        id={1391349252}
+      />
     )
 }
 
@@ -34,16 +42,7 @@ describe('<TrackCard /> tests', () => {
 
   it('accepts and exibits album cover, song title, singer and duration', () => {
 
-    render(
-      <TrackCard
-        cover="https://api.deezer.com/album/234349272/image"
-        title="Meu Pedaço de Pecado"
-        singer="João Gomes"
-        time={157}
-        fullSong="https://www.deezer.com/track/1391349252"
-        preview="https://cdns-preview-7.dzcdn.net/stream/c-70255a40b7c438c3239e94ba0c909128-3.mp3"
-      />
-    )
+    testRender()
 
     expect(screen.getByAltText(/cover/i).src).toBe("https://api.deezer.com/album/234349272/image")
     expect(screen.getByText(/Meu Pedaço de Pecado/))
