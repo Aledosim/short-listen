@@ -2,12 +2,12 @@ import React, { useEffect } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { refresh } from './trackListSlice'
+import { refresh, selectTrackList } from './trackListSlice'
 import TrackCard from '../trackcard/TrackCard'
 
 export default function TrackList(){
 
-  const trackList = useSelector((state) => state.trackList.value)
+  const trackList = useSelector(selectTrackList)
   const dispatch = useDispatch()
 
   useEffect(() => {
