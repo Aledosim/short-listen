@@ -73,8 +73,15 @@ describe('<TrackList /> tests', () => {
     })
 
     expect(screen.getByRole("list"))
-    const items = screen.getAllByRole("listitem")
-    expect(items.length).toEqual(10)  // there are 10 values on chartFixture.json
+
+    // there are 10 entries on chartFixture.json
+    expect(screen.getAllByTestId("cover").length).toEqual(10)
+    expect(screen.getAllByTestId("title").length).toEqual(10)
+    expect(screen.getAllByTestId("singer").length).toEqual(10)
+    expect(screen.getAllByTestId("time").length).toEqual(10)
+    expect(screen.getAllByTestId("preview").length).toEqual(10)
+    expect(screen.getAllByTestId("link").length).toEqual(10)
+    expect(screen.getAllByTestId("id").length).toEqual(10)
   })
 
 })
