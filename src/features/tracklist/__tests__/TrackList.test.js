@@ -2,8 +2,8 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
 
-import { store } from '../../app/store'
-import TrackList from './TrackList'
+import { store } from '../../../app/store'
+import TrackList from '../TrackList'
 
 function testRender() {
     return render(
@@ -13,7 +13,7 @@ function testRender() {
     )
 }
 
-jest.mock("../trackcard/TrackCard", () => {
+jest.mock("../../trackcard/TrackCard", () => {
 
   function DummyComponent(props) {
 

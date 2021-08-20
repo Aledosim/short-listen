@@ -1,0 +1,884 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrackList /> tests renders without crashing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        role="list"
+      >
+        <div
+          class="infinite-scroll-component__outerdiv"
+        >
+          <div
+            class="infinite-scroll-component "
+            style="height: auto; overflow: auto;"
+          >
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/234349272/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                Meu Pedaço de Pecado
+              </div>
+              <div
+                data-testid="singer"
+              >
+                João Gomes
+              </div>
+              <div
+                data-testid="time"
+              >
+                157
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-7.dzcdn.net/stream/c-70255a40b7c438c3239e94ba0c909128-3.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1391349252
+              </div>
+              <div
+                data-testid="id"
+              >
+                1391349252
+              </div>
+            </div>
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/248346272/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                Arranhão (Ao Vivo)
+              </div>
+              <div
+                data-testid="singer"
+              >
+                Henrique & Juliano
+              </div>
+              <div
+                data-testid="time"
+              >
+                153
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-7.dzcdn.net/stream/c-7a0cbcd2ee3363ace2cd26c4e0fe9c2d-4.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1450292592
+              </div>
+              <div
+                data-testid="id"
+              >
+                1450292592
+              </div>
+            </div>
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/207458032/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                Baby Me Atende
+              </div>
+              <div
+                data-testid="singer"
+              >
+                Matheus Fernandes
+              </div>
+              <div
+                data-testid="time"
+              >
+                225
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-5.dzcdn.net/stream/c-553433e74ce6e98a172c93c013361627-3.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1243010562
+              </div>
+              <div
+                data-testid="id"
+              >
+                1243010562
+              </div>
+            </div>
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/248550452/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                Quer Voar
+              </div>
+              <div
+                data-testid="singer"
+              >
+                Matuê
+              </div>
+              <div
+                data-testid="time"
+              >
+                187
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-0.dzcdn.net/stream/c-079cf195cc5a22d08269bd95ffc4e2e2-3.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1451144022
+              </div>
+              <div
+                data-testid="id"
+              >
+                1451144022
+              </div>
+            </div>
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/246523402/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                Rolê
+              </div>
+              <div
+                data-testid="singer"
+              >
+                Tarcísio do Acordeon
+              </div>
+              <div
+                data-testid="time"
+              >
+                174
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-f.dzcdn.net/stream/c-f6bf603194f05469680cf4240641fb21-3.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1442170372
+              </div>
+              <div
+                data-testid="id"
+              >
+                1442170372
+              </div>
+            </div>
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/234349272/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                Aquelas Coisas
+              </div>
+              <div
+                data-testid="singer"
+              >
+                João Gomes
+              </div>
+              <div
+                data-testid="time"
+              >
+                147
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-0.dzcdn.net/stream/c-0b9b2db9244ca982c80142a2bccd7b2c-3.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1391349282
+              </div>
+              <div
+                data-testid="id"
+              >
+                1391349282
+              </div>
+            </div>
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/235741762/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                MORENA
+              </div>
+              <div
+                data-testid="singer"
+              >
+                Luan Santana
+              </div>
+              <div
+                data-testid="time"
+              >
+                193
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-0.dzcdn.net/stream/c-029650b3975d7154fadfb718e1773f84-3.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1397354732
+              </div>
+              <div
+                data-testid="id"
+              >
+                1397354732
+              </div>
+            </div>
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/237363182/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                Se Joga no Passinho
+              </div>
+              <div
+                data-testid="singer"
+              >
+                Brisa Star
+              </div>
+              <div
+                data-testid="time"
+              >
+                200
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-0.dzcdn.net/stream/c-0200f1c343a697cdd16d55a29c75bfb1-4.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1404805642
+              </div>
+              <div
+                data-testid="id"
+              >
+                1404805642
+              </div>
+            </div>
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/235704972/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                Ficha Limpa
+              </div>
+              <div
+                data-testid="singer"
+              >
+                Gusttavo Lima
+              </div>
+              <div
+                data-testid="time"
+              >
+                192
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-1.dzcdn.net/stream/c-1a227d91a0177bd6e3756f4b369056c7-3.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1397165102
+              </div>
+              <div
+                data-testid="id"
+              >
+                1397165102
+              </div>
+            </div>
+            <div
+              role="listitem"
+            >
+              <div
+                data-testid="cover"
+              >
+                https://api.deezer.com/album/234346602/image
+              </div>
+              <div
+                data-testid="title"
+              >
+                Se For Amor
+              </div>
+              <div
+                data-testid="singer"
+              >
+                João Gomes
+              </div>
+              <div
+                data-testid="time"
+              >
+                239
+              </div>
+              <div
+                data-testid="preview"
+              >
+                https://cdns-preview-d.dzcdn.net/stream/c-d471dd85a4f2c9a6436e909ff2f167a7-3.mp3
+              </div>
+              <div
+                data-testid="link"
+              >
+                https://www.deezer.com/track/1391338992
+              </div>
+              <div
+                data-testid="id"
+              >
+                1391338992
+              </div>
+            </div>
+            <p
+              style="text-align: center;"
+            >
+              <b>
+                Yay! You have seen it all
+              </b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      role="list"
+    >
+      <div
+        class="infinite-scroll-component__outerdiv"
+      >
+        <div
+          class="infinite-scroll-component "
+          style="height: auto; overflow: auto;"
+        >
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/234349272/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              Meu Pedaço de Pecado
+            </div>
+            <div
+              data-testid="singer"
+            >
+              João Gomes
+            </div>
+            <div
+              data-testid="time"
+            >
+              157
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-7.dzcdn.net/stream/c-70255a40b7c438c3239e94ba0c909128-3.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1391349252
+            </div>
+            <div
+              data-testid="id"
+            >
+              1391349252
+            </div>
+          </div>
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/248346272/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              Arranhão (Ao Vivo)
+            </div>
+            <div
+              data-testid="singer"
+            >
+              Henrique & Juliano
+            </div>
+            <div
+              data-testid="time"
+            >
+              153
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-7.dzcdn.net/stream/c-7a0cbcd2ee3363ace2cd26c4e0fe9c2d-4.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1450292592
+            </div>
+            <div
+              data-testid="id"
+            >
+              1450292592
+            </div>
+          </div>
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/207458032/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              Baby Me Atende
+            </div>
+            <div
+              data-testid="singer"
+            >
+              Matheus Fernandes
+            </div>
+            <div
+              data-testid="time"
+            >
+              225
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-5.dzcdn.net/stream/c-553433e74ce6e98a172c93c013361627-3.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1243010562
+            </div>
+            <div
+              data-testid="id"
+            >
+              1243010562
+            </div>
+          </div>
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/248550452/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              Quer Voar
+            </div>
+            <div
+              data-testid="singer"
+            >
+              Matuê
+            </div>
+            <div
+              data-testid="time"
+            >
+              187
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-0.dzcdn.net/stream/c-079cf195cc5a22d08269bd95ffc4e2e2-3.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1451144022
+            </div>
+            <div
+              data-testid="id"
+            >
+              1451144022
+            </div>
+          </div>
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/246523402/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              Rolê
+            </div>
+            <div
+              data-testid="singer"
+            >
+              Tarcísio do Acordeon
+            </div>
+            <div
+              data-testid="time"
+            >
+              174
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-f.dzcdn.net/stream/c-f6bf603194f05469680cf4240641fb21-3.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1442170372
+            </div>
+            <div
+              data-testid="id"
+            >
+              1442170372
+            </div>
+          </div>
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/234349272/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              Aquelas Coisas
+            </div>
+            <div
+              data-testid="singer"
+            >
+              João Gomes
+            </div>
+            <div
+              data-testid="time"
+            >
+              147
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-0.dzcdn.net/stream/c-0b9b2db9244ca982c80142a2bccd7b2c-3.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1391349282
+            </div>
+            <div
+              data-testid="id"
+            >
+              1391349282
+            </div>
+          </div>
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/235741762/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              MORENA
+            </div>
+            <div
+              data-testid="singer"
+            >
+              Luan Santana
+            </div>
+            <div
+              data-testid="time"
+            >
+              193
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-0.dzcdn.net/stream/c-029650b3975d7154fadfb718e1773f84-3.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1397354732
+            </div>
+            <div
+              data-testid="id"
+            >
+              1397354732
+            </div>
+          </div>
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/237363182/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              Se Joga no Passinho
+            </div>
+            <div
+              data-testid="singer"
+            >
+              Brisa Star
+            </div>
+            <div
+              data-testid="time"
+            >
+              200
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-0.dzcdn.net/stream/c-0200f1c343a697cdd16d55a29c75bfb1-4.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1404805642
+            </div>
+            <div
+              data-testid="id"
+            >
+              1404805642
+            </div>
+          </div>
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/235704972/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              Ficha Limpa
+            </div>
+            <div
+              data-testid="singer"
+            >
+              Gusttavo Lima
+            </div>
+            <div
+              data-testid="time"
+            >
+              192
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-1.dzcdn.net/stream/c-1a227d91a0177bd6e3756f4b369056c7-3.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1397165102
+            </div>
+            <div
+              data-testid="id"
+            >
+              1397165102
+            </div>
+          </div>
+          <div
+            role="listitem"
+          >
+            <div
+              data-testid="cover"
+            >
+              https://api.deezer.com/album/234346602/image
+            </div>
+            <div
+              data-testid="title"
+            >
+              Se For Amor
+            </div>
+            <div
+              data-testid="singer"
+            >
+              João Gomes
+            </div>
+            <div
+              data-testid="time"
+            >
+              239
+            </div>
+            <div
+              data-testid="preview"
+            >
+              https://cdns-preview-d.dzcdn.net/stream/c-d471dd85a4f2c9a6436e909ff2f167a7-3.mp3
+            </div>
+            <div
+              data-testid="link"
+            >
+              https://www.deezer.com/track/1391338992
+            </div>
+            <div
+              data-testid="id"
+            >
+              1391338992
+            </div>
+          </div>
+          <p
+            style="text-align: center;"
+          >
+            <b>
+              Yay! You have seen it all
+            </b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

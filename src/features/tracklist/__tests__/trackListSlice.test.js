@@ -1,8 +1,8 @@
 import trackListReducer, {
   refresh,
-} from './trackListSlice';
+} from '../trackListSlice';
 
-import * as trackListFixture from '../../fixtures/trackListFixture.json'
+import * as trackListFixture from '../__fixtures__/trackListFixture.json'
 
 describe('refresh from trackList reducer', () => {
   const initialState = {
