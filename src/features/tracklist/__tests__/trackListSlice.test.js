@@ -1,37 +1,58 @@
 import trackListReducer, {
   refresh,
+  refreshThunkCreator,
 } from '../trackListSlice';
 
 import * as trackListFixture from '../__fixtures__/trackListFixture.json'
+import chartFixture from '../../../__fixtures__/chartFixture'
 
-describe('refresh from trackList reducer', () => {
-  const initialState = {
-    value: [],
-  };
-  it.only('should handle initial state', () => {
+const initialState = {
+  value: [],
+  status: 'idle',  // idle, loading, suceeded, failed
+  error: null,
+}
+
+describe('trackList reducer', () => {
+  it('should handle initial state', () => {
     expect(trackListReducer(undefined, { type: 'unknown' })).toEqual({
       value: [],
-    });
-  });
+      status: 'idle',
+      error: null,
+    })
+  })
+})
 
-  it.only('should handle refresh', () => {
-    const actual = trackListReducer(initialState, refresh());
+describe('refreshThunkCreator', () => {
+  it('should return a array of tracks', async () => {
+    const actual = await refreshThunkCreator()
+    const expected = chartFixture.tracks
 
+    expect(actual).toEqual(expected)
+  })
+})
+
+describe('refresh async actions', () => {
+  it('should handle pending', () => {
+    const actual = trackListReducer(initialState, refresh.pending())
     const expected = {
-      value: trackListFixture.default
+      value: [],
+      status: 'loading',
+      error: null,
     }
 
     expect(actual).toEqual(expected)
+  })
 
-  });
+  it('should handle fulfilled', async () => {
+    const payload = await refreshThunkCreator()
 
-  it('should handle decrement', () => {
-    const actual = counterReducer(initialState, decrement());
-    expect(actual.value).toEqual(2);
-  });
+    const actual = trackListReducer(initialState, refresh.fulfilled(payload))
+    const expected = {
+      value: trackListFixture.default,
+      status: 'suceeded',
+      error: null,
+    }
 
-  it('should handle incrementByAmount', () => {
-    const actual = counterReducer(initialState, incrementByAmount(2));
-    expect(actual.value).toEqual(5);
-  });
-});
+    expect(actual).toEqual(expected)
+  })
+})
