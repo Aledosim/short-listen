@@ -40,7 +40,7 @@ describe('<TrackCard /> tests', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('accepts and exibits album cover, song title, singer and duration', () => {
+  it('should show album cover, song title, singer and duration', () => {
 
     testRender()
 
@@ -48,8 +48,8 @@ describe('<TrackCard /> tests', () => {
     expect(screen.getByText(/Meu Pedaço de Pecado/))
     expect(screen.getByText(/João Gomes/))
     expect(screen.getByText(/2:37/))
+  })
 
-    fail('test fullsong and preview')
   })
 
 })
