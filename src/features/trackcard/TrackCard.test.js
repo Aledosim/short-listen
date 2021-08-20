@@ -34,7 +34,7 @@ describe('songTime tests', () => {
 
 describe('<TrackCard /> tests', () => {
 
-  it('renders without crashing', async () => {
+  it('renders without crashing', () => {
     const tree = testRender()
 
     expect(tree).toMatchSnapshot()
