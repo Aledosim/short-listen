@@ -1,14 +1,24 @@
 import React from 'react';
+import { createGlobalStyle } from 'styled-components';
 
 import logo from './Deezer_Logo_RVB_MonoBlack.svg'
 import TopBar from '../features/topbar/TopBar'
 import TrackList from '../features/tracklist/TrackList'
 
+// colors
+const background = "#0A0A0A"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: ${background};
+  }
+`
+
 function App() {
   return (
     <>
+      <GlobalStyle />
       <header>
-        <img src={logo} />
         <TopBar />
       </header>
       <div>
