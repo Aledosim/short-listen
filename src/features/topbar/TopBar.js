@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import style from 'styled-components'
 
 import { ReactComponent as Logo } from './deezer_logo.svg'
+import searchIcon from './search_icon.svg'
 
 const Container = style.header`
   display: inline-flex;
@@ -36,7 +37,7 @@ const Form = style.form`
 const Input = style.input.attrs(() => {})`
   & {
     width: 100%;
-    height: 100%;
+    height: 80%;
     padding-right: 4rem;
     padding-left: 2rem;
 
@@ -55,10 +56,12 @@ const Button = style.button`
   transform: translateX(-100%);
   right: 9px;
 
-  width: 13px;
-  height: 14px;
+  height: 70%;
+  width: 3rem;
   border: none;
 
+  background-image: url(${searchIcon});
+  background-repeat: no-repeat;
   background-color: #F4F1F1;
   color: #9B9B9B;
 `
@@ -74,12 +77,12 @@ export default function TopBar(){
           type='search'
           autoComplete='on'
           autoSave='true'
-          placeholder='Album, artist or title'
+          placeholder='Album, artist or track title'
           id='searchField'
           data-cy='searchField'
         />
         <Button
-          type='submit'
+          type='button'
           data-cy='searchButton'
         />
       </Form>
