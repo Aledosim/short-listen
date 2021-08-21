@@ -55,4 +55,20 @@ describe('trackChartEnded async actions', () => {
 
     expect(actual).toEqual(expected)
   })
+
+  it('should handle various fulfilled', async () => {
+    const payload = await fetchTrackChart()
+
+    const firstState = trackListReducer(initialState, trackChartEnded.fulfilled(payload))
+
+    const actual = trackListReducer(firstState, trackChartEnded.fulfilled(payload))
+
+    const expected = {
+      value: trackListFixture.default.concat(trackListFixture.default),
+      status: 'suceeded',
+      error: null,
+    }
+
+    expect(actual).toEqual(expected)
+  })
 })
