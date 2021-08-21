@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react'
+import styled from 'styled-components'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { trackChartEnded, selectTrackList } from './trackListSlice'
 import TrackCard from '../trackcard/TrackCard'
+
+const StyledInfiniteScroll = styled(InfiniteScroll)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
 export default function TrackList(){
 
@@ -24,7 +31,7 @@ export default function TrackList(){
 
   return(
     <div role="list">
-      <InfiniteScroll
+      <StyledInfiniteScroll
       dataLength={trackList.length} //This is important field to render the next data
       next={fetchMoreData}
       hasMore={true}
@@ -51,7 +58,7 @@ export default function TrackList(){
           )
         })
       }
-      </InfiniteScroll>
+      </StyledInfiniteScroll>
     </div>
   );
 };
