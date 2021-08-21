@@ -24,5 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import '@testing-library/cypress/add-commands';
+
 // Query elements by data-cy attribute
 Cypress.Commands.add('dataCy', (value) => cy.get(`[data-cy=${value}]`))
