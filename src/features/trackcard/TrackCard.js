@@ -14,28 +14,39 @@ export function songTime(totalTime) {
 const background = "#14213D"
 const text = "#E5E5E5"
 const buttonColor = "#2D4B8B"
+const margin = "#FFFFA7"
+const border = "#FCA311"
 
 // styles
 const Container = styled.div`
   width: 30rem;
   height: 10rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: stretch;
 
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
+
+  border-radius: 18px;
+
+  box-shadow: 1px 1px 5px 1px ${margin};
 
   background-color: ${background};
 `
 
 const Img = styled.img`
-
+  border-radius: 5px;
+  border-width: 0.5px;
+  border-color: ${border};
+  border-style: solid;
 `
 const Info = styled.div`
   display: flex;
@@ -65,8 +76,9 @@ const Button = styled.button`
   background-position: center;
 
   border-style: solid;
+  border-radius: 5px;
   border-width: 1px;
-  border-color: black;
+  border-color: ${border};
 `
 
 const PlayPauseButton = styled(Button)`
