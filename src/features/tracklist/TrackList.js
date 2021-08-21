@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { refresh, selectTrackList } from './trackListSlice'
+import { trackChartEnded, selectTrackList } from './trackListSlice'
 import TrackCard from '../trackcard/TrackCard'
 
 export default function TrackList(){
@@ -10,16 +10,24 @@ export default function TrackList(){
   const trackList = useSelector(selectTrackList)
   const dispatch = useDispatch()
 
+  const pageSize = 30
+  var isSearch = false
+
   useEffect(() => {
-    dispatch(refresh())
-  }, [])
+    dispatch(trackChartEnded({index: 0, limit: pageSize}))
+  }, [dispatch])
+
+  function fetchMoreData(){
+    console.log("fetchMoreData")
+    dispatch(trackChartEnded({index: trackList.length, limit: pageSize}))
+  }
 
   return(
     <div role="list">
       <InfiniteScroll
-      dataLength={10} //This is important field to render the next data
-      next="fetchData"
-      hasMore={false}
+      dataLength={trackList.length} //This is important field to render the next data
+      next={fetchMoreData}
+      hasMore={true}
       loader={<h4>Loading...</h4>}
       endMessage={
         <p style={{ textAlign: 'center' }}>
@@ -28,18 +36,20 @@ export default function TrackList(){
       }
       >
       {
-        trackList.map( (track) =>
-          <TrackCard
-            cover={track.cover}
-            title={track.title}
-            singer={track.singer}
-            time={track.time}
-            preview={track.preview}
-            link={track.link}
-            key={track.id}
-            id={track.id}
-          />
-        )
+        trackList.map( (track, i) => {
+          return(
+              <TrackCard
+                cover={track.cover}
+                title={track.title}
+                singer={track.singer}
+                time={track.time}
+                preview={track.preview}
+                link={track.link}
+                id={track.id}
+                key={i}
+              />
+          )
+        })
       }
       </InfiniteScroll>
     </div>
