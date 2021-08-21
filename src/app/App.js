@@ -1,7 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
-import logo from './Deezer_Logo_RVB_MonoBlack.svg'
 import TopBar from '../features/topbar/TopBar'
 import TrackList from '../features/tracklist/TrackList'
 
