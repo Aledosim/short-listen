@@ -17,9 +17,8 @@ const buttonColor = "#2D4B8B"
 const margin = "#FFFFA7"
 const border = "#FCA311"
 
-// styles
 const Container = styled.div`
-  width: 30rem;
+  width: 35rem;
   height: 10rem;
   display: flex;
   justify-content: space-between;
@@ -58,6 +57,7 @@ const Info = styled.div`
   padding-right: 1rem;
 
   color: ${text};
+  line-height: 2rem;
 `
 
 const ButtonContainer = styled.div`
@@ -67,8 +67,8 @@ const ButtonContainer = styled.div`
 `
 
 const Button = styled.button`
-  height: 100px;
-  width: 100px;
+  height: 3.4rem;
+  width: 4.7rem;
   padding-right: 10px;
 
   background-color: ${buttonColor};
