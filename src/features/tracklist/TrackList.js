@@ -6,10 +6,15 @@ import { useSelector, useDispatch } from 'react-redux'
 import { trackChartEnded, selectTrackList } from './trackListSlice'
 import TrackCard from '../trackcard/TrackCard'
 
+// colors
+const text = "#EBEBEB"
+
 const StyledInfiniteScroll = styled(InfiniteScroll)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  color: ${text};
 `
 
 export default function TrackList(){
