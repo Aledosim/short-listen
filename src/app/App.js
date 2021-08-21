@@ -1,5 +1,5 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
+import style, { createGlobalStyle } from 'styled-components';
 
 import TopBar from '../features/topbar/TopBar'
 import TrackList from '../features/tracklist/TrackList'
@@ -13,16 +13,29 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const Header = style.header`
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  background-color: ${background};
+`
+
+const TrackListContainer = style.div`
+  position: relative;
+  top: 4.5rem;
+`
+
 function App() {
   return (
     <>
       <GlobalStyle />
-      <header>
+      <Header>
         <TopBar />
-      </header>
-      <div>
+      </Header>
+      <TrackListContainer>
         <TrackList />
-      </div>
+      </TrackListContainer>
     </>
   );
 }
