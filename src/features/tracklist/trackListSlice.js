@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-import { fetchTracksChart } from '../../utils/apiclient'
+import { fetchTracksChart, fetchTerm } from '../../utils/apiclient'
 
 const initialState = {
   value: [],
@@ -31,8 +31,13 @@ export const trackChartEnded = createAsyncThunk(
   }
 )
 
-export const fetchMoreData = createAsyncThunk(
-  'trackList/fetchMoreData',
+export async function fetchTermThunk({index, limit} = {index: undefined, limit: undefined}, thunkAPI) {
+  const term = thunkAPI.getState().trackList.searchTerm
+  const searchResult = await fetchTerm(term, {index, limit})
+
+  // thunkAPI.dispatch(resetedTrackList())
+  return searchResult.data.data
+}
 
 )
 
