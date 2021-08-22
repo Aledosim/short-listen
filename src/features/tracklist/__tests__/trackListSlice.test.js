@@ -1,6 +1,7 @@
 import trackListReducer, {
   trackChartEnded,
   fetchTracksChartThunk,
+  searchedTerm,
 } from '../trackListSlice';
 
 import * as trackListFixture from '../__fixtures__/trackListFixture.json'
@@ -10,22 +11,21 @@ const initialState = {
   value: [],
   status: 'idle',  // idle, loading, suceeded, failed
   error: null,
+  searchTerm: '',
+  isSearch: false,
 }
 
 describe('trackList reducer', () => {
   it('should handle initial state', () => {
-    expect(trackListReducer(undefined, { type: 'unknown' })).toEqual({
-      value: [],
-      status: 'idle',
-      error: null,
-    })
+    expect(trackListReducer(undefined, { type: 'unknown' })).toEqual(initialState)
+
   })
 })
 
 describe('fetchTracksChartThunk', () => {
   it('should return a array of tracks', async () => {
     const actual = await fetchTracksChartThunk()
-    const expected = chartFixture.tracks
+    const expected = chartFixture.tracks.data
 
     expect(actual).toEqual(expected)
   })
@@ -35,9 +35,8 @@ describe('trackChartEnded async actions', () => {
   it('should handle pending', () => {
     const actual = trackListReducer(initialState, trackChartEnded.pending())
     const expected = {
-      value: [],
+      ...initialState,
       status: 'loading',
-      error: null,
     }
 
     expect(actual).toEqual(expected)
@@ -48,9 +47,9 @@ describe('trackChartEnded async actions', () => {
 
     const actual = trackListReducer(initialState, trackChartEnded.fulfilled(payload))
     const expected = {
+      ...initialState,
       value: trackListFixture.default,
       status: 'suceeded',
-      error: null,
     }
 
     expect(actual).toEqual(expected)
@@ -64,11 +63,25 @@ describe('trackChartEnded async actions', () => {
     const actual = trackListReducer(firstState, trackChartEnded.fulfilled(payload))
 
     const expected = {
+      ...initialState,
       value: trackListFixture.default.concat(trackListFixture.default),
       status: 'suceeded',
-      error: null,
     }
 
     expect(actual).toEqual(expected)
+  })
+})
+
+describe('searchedTerm reducer', () => {
+  it('should set isSearch and searchTerm', () => {
+    const actual = trackListReducer(initialState, searchedTerm('test term'))
+    const expected = {
+      ...initialState,
+      searchTerm: 'test term',
+      isSearch: true,
+    }
+
+    expect(actual).toEqual(expected)
+
   })
 })
