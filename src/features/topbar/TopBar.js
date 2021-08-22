@@ -5,7 +5,7 @@ import style from 'styled-components'
 import { ReactComponent as Logo } from './images/deezer_logo.svg'
 import searchIcon from './images/search_icon.svg'
 
-import termSearched from './searchSlice'
+import { termSearched } from './searchSlice'
 
 const Container = style.header`
   display: inline-flex;
@@ -68,7 +68,7 @@ const Button = style.button`
   color: #9B9B9B;
 `
 
-function search(event) {
+export function search(event) {
   const searchField  = document.getElementById('searchField')
   const text = searchField.value.toLowerCase()
 

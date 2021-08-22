@@ -6,7 +6,7 @@ const initialState = {
   error: null,
 }
 
-const termSearched = ''
+export const termSearched = () => {}
 // export const termSearched = createAsyncThunk(
 //   'searchTerm/termSearched',
 //   fetchTrackChart,
