@@ -144,7 +144,7 @@ Object {
             <button
               class="c5"
               data-cy="searchButton"
-              type="button"
+              type="submit"
             />
           </form>
         </header>
@@ -199,7 +199,7 @@ Object {
           <button
             class="sc-eCApnc kAxBQA"
             data-cy="searchButton"
-            type="button"
+            type="submit"
           />
         </form>
       </header>

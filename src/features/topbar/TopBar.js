@@ -99,7 +99,7 @@ export default function TopBar(){
           data-cy='searchField'
         />
         <Button
-          type='button'
+          type='submit'
           onClick={search(dispatch)}
           data-cy='searchButton'
         />
