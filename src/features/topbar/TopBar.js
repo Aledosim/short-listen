@@ -1,11 +1,12 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
 import style from 'styled-components'
 
 import { ReactComponent as Logo } from './images/deezer_logo.svg'
 import searchIcon from './images/search_icon.svg'
 
-import { termSearched } from './searchSlice'
+import { searchedTerm } from '../tracklist/trackListSlice'
 
 const Container = style.header`
   display: inline-flex;
@@ -68,16 +69,20 @@ const Button = style.button`
   color: #9B9B9B;
 `
 
-export function search(event) {
-  const searchField  = document.getElementById('searchField')
-  const text = searchField.value.toLowerCase()
+export function search(dispatch) {
+  const innerSearch = (event) => {
+    const searchField  = document.getElementById('searchField')
+    const text = searchField.value.toLowerCase()
 
-  termSearched(text)
+    dispatch(searchedTerm(text))
 
-  event.preventDefault()
+    event.preventDefault()
+  }
+  return innerSearch
 }
 
 export default function TopBar(){
+  const dispatch = useDispatch()
 
   return(
     <Container data-cy='topbar'>
@@ -95,7 +100,7 @@ export default function TopBar(){
         />
         <Button
           type='button'
-          onClick={search}
+          onClick={search(dispatch)}
           data-cy='searchButton'
         />
       </Form>
