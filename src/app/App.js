@@ -8,8 +8,30 @@ import TrackList from '../features/tracklist/TrackList'
 const background = "#0A0A0A"
 
 const GlobalStyle = createGlobalStyle`
+	* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	}
+
   body {
     background-color: ${background};
+  }
+
+	@media(max-width: 1080px) {
+			html {
+					font-size: 93.75%;
+			}
+	}
+
+	@media(max-width: 720px) {
+			html {
+					font-size: 87.5%;
+			}
+	}
+
+  button {
+      cursor: pointer;
   }
 `
 
