@@ -92,7 +92,7 @@ export default function TrackCard(props){
       <Img alt="Album cover" src={props.cover} />
       <Info>
         <div>{props.title}</div>
-        <div>{props.singer}</div>
+        <div data-cy="artistName">{props.singer}</div>
         <div>{songTime(props.time)}</div>
       </Info>
       <ButtonContainer>

@@ -108,7 +108,9 @@ Object {
           <div>
             Meu Pedaço de Pecado
           </div>
-          <div>
+          <div
+            data-cy="artistName"
+          >
             João Gomes
           </div>
           <div>
@@ -150,7 +152,9 @@ Object {
         <div>
           Meu Pedaço de Pecado
         </div>
-        <div>
+        <div
+          data-cy="artistName"
+        >
           João Gomes
         </div>
         <div>
