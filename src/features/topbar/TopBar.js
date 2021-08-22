@@ -16,7 +16,6 @@ const Container = style.header`
   max-height: 50px;
   padding-top: 0.75rem;
   padding-bottom: 0.5rem;
-
 `
 
 const StyledLogo = styled(Logo)`
@@ -31,7 +30,7 @@ const Form = style.form`
   margin: auto;
 
   width: 30rem;
-  height: 3rem;
+  height: 2rem;
 
   display: flex;
   align-items: center;
