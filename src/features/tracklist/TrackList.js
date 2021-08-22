@@ -3,7 +3,13 @@ import styled from 'styled-components'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { trackChartEnded, selectTrackList } from './trackListSlice'
+import {
+  trackChartEnded,
+  selectTrackList,
+  selectIsSearch,
+  searchedTracksEnded,
+} from './trackListSlice'
+
 import TrackCard from '../trackcard/TrackCard'
 
 // colors
@@ -20,18 +26,26 @@ const StyledInfiniteScroll = styled(InfiniteScroll)`
 export default function TrackList(){
 
   const trackList = useSelector(selectTrackList)
+  const isSearch = useSelector(selectIsSearch)
   const dispatch = useDispatch()
 
   const pageSize = 30
-  var isSearch = false
 
   useEffect(() => {
-    dispatch(trackChartEnded({index: 0, limit: pageSize}))
-  }, [dispatch])
+    if (isSearch){
+      dispatch(searchedTracksEnded({index: 0, limit: pageSize}))
+    } else {
+      dispatch(trackChartEnded({index: 0, limit: pageSize}))
+    }
+  }, [isSearch, dispatch])
 
   function fetchMoreData(){
     console.log("fetchMoreData")
-    dispatch(trackChartEnded({index: trackList.length, limit: pageSize}))
+    if (isSearch){
+      dispatch(searchedTracksEnded({index: trackList.length, limit: pageSize}))
+    } else {
+      dispatch(trackChartEnded({index: trackList.length, limit: pageSize}))
+    }
   }
 
   return(
