@@ -20,6 +20,15 @@ const initialState = {
   isSearch: false,
 }
 
+// state after searchedTerm action
+const searchInitalState = {
+  value: [],
+  status: 'idle',
+  error: null,
+  searchterm: 'eminem',
+  issearch: true,
+}
+
 describe('trackList reducer', () => {
   it('should handle initial state', () => {
     expect(trackListReducer(undefined, { type: 'unknown' })).toEqual(initialState)
@@ -99,6 +108,45 @@ describe('fetchTermThunk', () => {
   })
 })
 
+describe('searchedTracksEnded async actions', () => {
+  it('should handle pending', () => {
+    const actual = trackListReducer(searchInitalState, searchedTracksEnded.pending())
 
+    const expected = {
+      ...searchInitalState,
+      status: 'loading',
+    }
+
+    expect(actual).toEqual(expected)
+  })
+
+  it('should handle fulfilled', async () => {
+    const payload = await fetchTermThunk({index: 0, limit: 10}, store)
+
+    const actual = trackListReducer(searchInitalState, searchedTracksEnded.fulfilled(payload))
+    const expected = {
+      ...searchInitalState,
+      status: 'suceeded',
+      value: searchTermFixture.default,
+    }
+
+    expect(actual).toEqual(expected)
+  })
+
+  it('should handle various fulfilled', async () => {
+    const payload = await fetchTermThunk({index: 0, limit: 10}, store)
+
+    const firstState = trackListReducer(searchInitalState, searchedTracksEnded.fulfilled(payload))
+
+    const actual = trackListReducer(firstState, searchedTracksEnded.fulfilled(payload))
+
+    const expected = {
+      ...searchInitalState,
+      value: searchTermFixture.default.concat(searchTermFixture.default),
+      status: 'suceeded',
+    }
+
+    expect(actual).toEqual(expected)
   })
 })
+
