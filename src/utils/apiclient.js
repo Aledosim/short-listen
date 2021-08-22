@@ -6,7 +6,7 @@ export async function fetchTracksChart({index, limit} = {index: undefined, limit
 
   try {
     const response = await axios.get('chart', { params: {index, limit} })
-    return response.data.tracks
+    return response
   } catch (error) {
     console.log("Something got really bad")
     console.log(error)

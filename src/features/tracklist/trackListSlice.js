@@ -12,7 +12,7 @@ export async function fetchTracksChartThunk({index, limit} = {index: undefined, 
 
   const tracksChart = await fetchTracksChart({index: index, limit: limit})
 
-  return tracksChart
+  return tracksChart.data.tracks
 }
 
 export const trackChartEnded = createAsyncThunk(
