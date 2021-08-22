@@ -1,27 +1,41 @@
 it('Gus first impressions', () => {
+  cy.intercept(/api.deezer.com\/chart/).as('chartRequest')
+
   // Gus wants to test a new webapp to get information about Deezer catalog
   cy.visit('/')
 
-  // He notes the chart list...
+  // He waits for the page to load
+  cy.wait('@chartRequest')
+
+  // He notes the search field,
+  cy.dataCy('searchField')
+    .should('be.visible')
+
+  // the chart list...
   cy.findByRole('list')
     .should('be.visible')
+    .within(() => {
 
-  // and the search field.
-  cy.findAllByRole('listitem')
-    .should('be.visible')
-    .within((items) => {
-      // Gus look at the list items and notice...
+      // and the track cards.
+      cy.findAllByRole('listitem')
+        .not(':visible')
+        .should('have.lengthOf', 0)
+        .each((item) => {
 
-      // the music information,
-      // (album cover, music title, singer, duration)
+          // The card shows
 
-      // the full song button,
+          cy.get('button', {withinSubject: item})
+            .within(() => {
+              // the full song button,
 
-      // the play/pause button,
+              // the play/pause button,
 
-      // and the add to favs button.
+              // and the add to favs button.
 
+            })
+
+        })
     })
-
-
 })
+
+
