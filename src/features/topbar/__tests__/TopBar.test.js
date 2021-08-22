@@ -74,7 +74,8 @@ describe('<TopBar /> tests', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it.skip('call search when search button is clicked', async () => {
+  it('call search when search button is clicked', async () => {
+    fail("I could not mock this function in time")
     const mockSearch = jest.spyOn(TopBarModule, 'search')
 
     testRender()
