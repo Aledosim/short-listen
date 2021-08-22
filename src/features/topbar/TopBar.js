@@ -5,6 +5,8 @@ import style from 'styled-components'
 import { ReactComponent as Logo } from './images/deezer_logo.svg'
 import searchIcon from './images/search_icon.svg'
 
+import termSearched from './searchSlice'
+
 const Container = style.header`
   display: inline-flex;
   align-items: center;
@@ -65,6 +67,16 @@ const Button = style.button`
   background-color: #F4F1F1;
   color: #9B9B9B;
 `
+
+function search(event) {
+  const searchField  = document.getElementById('searchField')
+  const text = searchField.value.toLowerCase()
+
+  termSearched(text)
+
+  event.preventDefault()
+}
+
 export default function TopBar(){
 
   return(
@@ -83,6 +95,7 @@ export default function TopBar(){
         />
         <Button
           type='button'
+          onClick={search}
           data-cy='searchButton'
         />
       </Form>
