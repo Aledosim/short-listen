@@ -23,3 +23,19 @@ export async function fetchTracksChart(options){
     console.log(error)
   }
 }
+
+export async function fetchTerm(term, {index, limit} = {index: undefined, limit: undefined}){
+
+  const params = {
+    q: term,
+    index: index,
+    limit: limit,
+  }
+
+  try {
+    const response = await axios.get('search', { params: params })
+    return response.data.data
+  } catch (error) {
+    console.log(error)
+  }
+}
