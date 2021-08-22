@@ -8,16 +8,7 @@ const initialState = {
   error: null,
 }
 
-export async function fetchTrackChart(params) {
-  console.log("Fetching data")
-
-  var index
-  var limit
-
-  if (params){
-    index = params.index
-    limit = params.limit
-  }
+export async function fetchTracksChartThunk({index, limit} = {index: undefined, limit: undefined}) {
 
   const tracksChart = await fetchTracksChart({index: index, limit: limit})
 
@@ -26,7 +17,7 @@ export async function fetchTrackChart(params) {
 
 export const trackChartEnded = createAsyncThunk(
   'trackList/trackChartEnded',
-  fetchTrackChart,
+  fetchTracksChartThunk,
   {
     condition: (arg, { getState }) => {
       const { trackList } = getState()

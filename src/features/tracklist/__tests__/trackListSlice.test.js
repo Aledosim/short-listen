@@ -1,6 +1,6 @@
 import trackListReducer, {
   trackChartEnded,
-  fetchTrackChart,
+  fetchTracksChartThunk,
 } from '../trackListSlice';
 
 import * as trackListFixture from '../__fixtures__/trackListFixture.json'
@@ -22,9 +22,9 @@ describe('trackList reducer', () => {
   })
 })
 
-describe('fetchTrackChart', () => {
+describe('fetchTracksChartThunk', () => {
   it('should return a array of tracks', async () => {
-    const actual = await fetchTrackChart()
+    const actual = await fetchTracksChartThunk()
     const expected = chartFixture.tracks
 
     expect(actual).toEqual(expected)
@@ -44,7 +44,7 @@ describe('trackChartEnded async actions', () => {
   })
 
   it('should handle fulfilled', async () => {
-    const payload = await fetchTrackChart()
+    const payload = await fetchTracksChartThunk()
 
     const actual = trackListReducer(initialState, trackChartEnded.fulfilled(payload))
     const expected = {
@@ -57,7 +57,7 @@ describe('trackChartEnded async actions', () => {
   })
 
   it('should handle various fulfilled', async () => {
-    const payload = await fetchTrackChart()
+    const payload = await fetchTracksChartThunk()
 
     const firstState = trackListReducer(initialState, trackChartEnded.fulfilled(payload))
 
