@@ -3,7 +3,22 @@
 exports[`<TrackList /> tests renders without crashing 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #EBEBEB;
+}
+
+<body>
     <div>
       <div
         role="list"
@@ -12,7 +27,7 @@ Object {
           class="infinite-scroll-component__outerdiv"
         >
           <div
-            class="infinite-scroll-component "
+            class="infinite-scroll-component c0"
             style="height: auto; overflow: auto;"
           >
             <div
@@ -418,7 +433,7 @@ Object {
         class="infinite-scroll-component__outerdiv"
       >
         <div
-          class="infinite-scroll-component "
+          class="infinite-scroll-component sc-bdnxRM kyjttw"
           style="height: auto; overflow: auto;"
         >
           <div
