@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import style from 'styled-components'
 
-import { ReactComponent as Logo } from './deezer_logo.svg'
-import searchIcon from './search_icon.svg'
+import { ReactComponent as Logo } from './images/deezer_logo.svg'
+import searchIcon from './images/search_icon.svg'
 
 const Container = style.header`
   display: inline-flex;
