@@ -6,19 +6,20 @@ const initialState = {
   error: null,
 }
 
-export const termSearched = createAsyncThunk(
-  'searchTerm/termSearched',
-  fetchTrackChart,
-  {
-    condition: (arg, { getState }) => {
-      const { trackList } = getState()
-      const fetchStatus = trackList.status
-      if (fetchStatus === 'loading'){
-        return false
-      }
-    }
-  }
-)
+const termSearched = ''
+// export const termSearched = createAsyncThunk(
+//   'searchTerm/termSearched',
+//   fetchTrackChart,
+//   {
+//     condition: (arg, { getState }) => {
+//       const { trackList } = getState()
+//       const fetchStatus = trackList.status
+//       if (fetchStatus === 'loading'){
+//         return false
+//       }
+//     }
+//   }
+// )
 
 export const searchTermSlice = createSlice({
   name: 'searchTerm',
