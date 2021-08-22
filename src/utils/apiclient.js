@@ -23,7 +23,7 @@ export async function fetchTerm(term, {index, limit} = {index: undefined, limit:
 
   try {
     const response = await axios.get('search', { params: params })
-    return response.data.data
+    return response
   } catch (error) {
     console.log(error)
   }
