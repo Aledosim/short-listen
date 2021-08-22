@@ -1,11 +1,16 @@
 import trackListReducer, {
   trackChartEnded,
   fetchTracksChartThunk,
+  searchedTracksEnded,
+  fetchTermThunk,
   searchedTerm,
 } from '../trackListSlice';
 
+import { store } from '../../../app/store'
 import * as trackListFixture from '../__fixtures__/trackListFixture.json'
+import * as searchTermFixture from '../__fixtures__/searchTermFixture.json'
 import chartFixture from '../../../__fixtures__/chartFixture'
+import searchFixture from '../../../__fixtures__/searchFixture.json'
 
 const initialState = {
   value: [],
@@ -82,6 +87,18 @@ describe('searchedTerm reducer', () => {
     }
 
     expect(actual).toEqual(expected)
+  })
+})
+
+describe('fetchTermThunk', () => {
+  it('should return a array of tracks', async () => {
+    const actual = await fetchTermThunk({index: 0, limit: 10}, store)
+    const expected = searchFixture.data
+
+    expect(actual).toEqual(expected)
+  })
+})
+
 
   })
 })
