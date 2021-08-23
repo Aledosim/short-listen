@@ -33,16 +33,19 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-    <ul>
-        <li><a href="#futuretasks">Future tasks</a></li>
+    <li>
+      <a href="#acknowledgements">Acknowledgements</a>
+      <ul>
+        <li><a href="#what-ive-learned">What I've learned</a></li>
+        <li><a href="#future-tasks">Future tasks</a></li>
       </ul>
+    </li>
   </ol>
 </details>
 
 ## About The Project
-This is a one page application that shows you the most played musics of Deezer. It allows you to search the catalog and save your favorite ones in a list. The list isn't persistent and it don't play the previews of the musics yet.
-You can check live [here](https://short-listen.vercel.app/).
+This is a one page application that shows you the most played musics of Deezer. With it you can search the catalog and save your favorite ones in a list. The list isn't persistent and it don't play the previews of the musics yet, but the link for the full song works.
+You can check it live [here](https://short-listen.vercel.app/).
 
 ### Built With
 * [React](https://reactjs.org/)
@@ -57,7 +60,7 @@ Just clone this repo and install it using npm.
 
 
 ### Prerequisites
-To run this project you need node (developed with v14.17.5)
+To run this project you need NodeJS (developed with v14.17.5)
 
 
 ### Installation
@@ -76,7 +79,7 @@ To view the page locally run the development server
    npm start
    ```
 
-Right now Deezer API responses don't have access-control-allow-origin headers. If you find troubles with CORS, try some extension for your browser. [More info](https://stackoverflow.com/questions/45483759/cannot-load-deezer-api-resources-from-localhost-with-the-fetch-api).
+Right now Deezer API responses don't have `access-control-allow-origin` headers. If you find troubles with CORS, try some extension for your browser. [More info](https://stackoverflow.com/questions/45483759/cannot-load-deezer-api-resources-from-localhost-with-the-fetch-api).
 
 
 ### Testing
@@ -95,6 +98,7 @@ Distributed under the GPL3 License. See `LICENSE` for more information.
 
 ## Contact
 Alexandre do Sim - [LinkedIn](https://www.linkedin.com/in/alexandre-do-sim-86930414b/) - aledosim@yahoo.com.br
+
 Project Link: [https://github.com/Aledosim/short-listen](https://github.com/Aledosim/short-listen)
 
 
@@ -102,8 +106,9 @@ Project Link: [https://github.com/Aledosim/short-listen](https://github.com/Aled
 This application is a Manipulaê junior front-end development challenge.
 
 ### What I've learned
-For this project I learned to use Redux, Styled Components and Axios. I had some difficulty structuring the Redux slices, but I discovered that it was a problem in the division of responsibilities. Axios is a library easy to learn and use, with great documentation.
-Right now in love with Styled Components.
+For this project I learned to use Redux, Styled Components and Axios. I had some difficulty structuring the Redux slices, but I discovered that it was a problem in the division of responsibilities. Redux is a great tool which guide somehow our work with his archtecture and with a lot of things to learn about it. Axios is a library easy to learn and use, with great documentation.
+
+Right now in love with Styled Components. The possibilities to create dynamic interfaces are huge and I just started to have fun with it.
 
 ### Future tasks
 - Implement music player (to listen the tracks preview)
