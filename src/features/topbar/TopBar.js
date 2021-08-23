@@ -7,6 +7,7 @@ import { ReactComponent as Logo } from './images/deezer_logo.svg'
 import searchIcon from './images/search_icon.svg'
 
 import { searchedTerm } from '../tracklist/trackListSlice'
+import { changedToFavorites } from '../../app/appSlice'
 
 const Container = style.header`
   display: inline-flex;
@@ -103,6 +104,10 @@ export default function TopBar(){
           data-cy='searchButton'
         />
       </Form>
+      <button name='favorites'
+        type='button'
+        onClick={() => {dispatch(changedToFavorites())}}
+      />
     </Container>
   );
 };
