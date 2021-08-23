@@ -109,6 +109,10 @@ Object {
             type="submit"
           />
         </form>
+        <button
+          name="favorites"
+          type="button"
+        />
       </header>
     </div>
   </body>,
@@ -140,6 +144,10 @@ Object {
           type="submit"
         />
       </form>
+      <button
+        name="favorites"
+        type="button"
+      />
     </header>
   </div>,
   "debug": [Function],
