@@ -22,7 +22,7 @@ Object {
     <div>
       <header>
         <button
-          name="favorites"
+          name="track list"
         />
       </header>
       <div
@@ -50,7 +50,7 @@ Object {
   "container": <div>
     <header>
       <button
-        name="favorites"
+        name="track list"
       />
     </header>
     <div
