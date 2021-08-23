@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import playIcon from './images/play/play.png'
+import infoIcon from './images/info/info.png'
+import favIcon from './images/favorite/favorite.png'
 
 export function songTime(totalTime) {
   const min = Math.floor(totalTime / 60)
@@ -85,6 +87,14 @@ const PlayPauseButton = styled(Button)`
   background-image: url(${props => props.icon});
 `
 
+const InfoButton = styled(Button)`
+  background-image: url(${infoIcon});
+`
+
+const FavButton = styled(Button)`
+  background-image: url(${favIcon});
+`
+
 export default function TrackCard(props){
 
   return(
@@ -97,8 +107,8 @@ export default function TrackCard(props){
       </Info>
       <ButtonContainer>
         <PlayPauseButton name='play/pause' icon={playIcon}/>
-        <Button name='more info' />
-        <Button name='favorite' />
+        <InfoButton name='more info' />
+        <FavButton name='favorite' />
       </ButtonContainer>
     </Container>
   );
