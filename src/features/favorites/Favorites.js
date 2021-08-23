@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import InfiniteScroll from 'react-infinite-scroll-component'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { selectFavorites } from './favoritesSlice'
-
+import { selectTrackList } from '../tracklist/trackListSlice'
 import TrackCard from '../trackcard/TrackCard'
+import { changedToTrackList } from '../../app/appSlice'
 
 // colors
 const text = "#EBEBEB"
@@ -21,11 +22,15 @@ const StyledInfiniteScroll = styled(InfiniteScroll)`
 export default function Favorites(){
 
   const favorites = useSelector(selectFavorites)
+  const trackList = useSelector(selectTrackList)
+  const dispatch = useDispatch()
 
   return(
     <>
       <header>
-        <button name='favorites' />
+        <button name='track list'
+          onClick={() => dispatch(changedToTrackList())}
+        />
       </header>
       <div role="list">
         <StyledInfiniteScroll
@@ -39,7 +44,8 @@ export default function Favorites(){
           }
           >
           {
-            favorites.map( (track, i) => {
+            favorites.map( (trackId, i) => {
+              const track = trackList.find((track) => track.id == trackId)
               return(
                 <TrackCard
                 cover={track.cover}
