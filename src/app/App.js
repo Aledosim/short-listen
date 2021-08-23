@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 
 import TopBar from '../features/topbar/TopBar'
 import TrackList from '../features/tracklist/TrackList'
+import Favorites from '../features/favorites/Favorites'
 import { selectView } from './appSlice'
 
 // colors
@@ -51,15 +52,24 @@ const TrackListContainer = style.div`
 `
 
 function App() {
+  const view = useSelector(selectView)
+
   return (
     <>
       <GlobalStyle />
-      <Header>
-        <TopBar />
-      </Header>
-      <TrackListContainer>
-        <TrackList />
-      </TrackListContainer>
+      {
+        view === 'favorites' ?
+          <Favorites />
+        :
+        <>
+          <Header>
+            <TopBar />
+          </Header>
+          <TrackListContainer>
+            <TrackList />
+          </TrackListContainer>
+        </>
+      }
     </>
   );
 }
