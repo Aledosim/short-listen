@@ -45,7 +45,7 @@ export default function Favorites(){
           >
           {
             favorites.map( (trackId, i) => {
-              const track = trackList.find((track) => track.id == trackId)
+              const track = trackList.find((track) => track.id === trackId)
               return(
                 <TrackCard
                 cover={track.cover}

@@ -113,7 +113,9 @@ Object {
         <div
           class="c2"
         >
-          <div>
+          <div
+            data-cy="trackTitle"
+          >
             Meu Pedaço de Pecado
           </div>
           <div
@@ -157,7 +159,9 @@ Object {
       <div
         class="sc-dlnjwi kuHGNG"
       >
-        <div>
+        <div
+          data-cy="trackTitle"
+        >
           Meu Pedaço de Pecado
         </div>
         <div

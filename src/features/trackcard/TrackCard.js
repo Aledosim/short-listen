@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { trackAdded } from '../favorites/favoritesSlice'
+import { trackAdded, trackRemoved, selectFavorites } from '../favorites/favoritesSlice'
 
 import playIcon from './images/play/play.png'
 import infoIcon from './images/info/info.png'
 import favIcon from './images/favorite/favorite.png'
+import favIconRed from './images/favorite/favorite_red.png'
 
 export function songTime(totalTime) {
   const min = Math.floor(totalTime / 60)
@@ -95,11 +96,25 @@ const InfoButton = styled(Button)`
 `
 
 const FavButton = styled(Button)`
-  background-image: url(${favIcon});
+  background-image: url(${props => props.favorites.includes(props.trackId) ? favIconRed : favIcon});
 `
+
+function handleFavorite(dispatch, favorites, trackId){
+
+  const innerHandler = () => {
+    if (favorites.includes(trackId)) {
+      dispatch(trackRemoved(trackId))
+    } else {
+      dispatch(trackAdded(trackId))
+    }
+  }
+
+  return innerHandler
+}
 
 export default function TrackCard(props){
   const dispatch = useDispatch()
+  const favorites = useSelector(selectFavorites)
 
   return(
     <Container role="listitem">
@@ -113,7 +128,9 @@ export default function TrackCard(props){
         <PlayPauseButton name='play/pause' icon={playIcon}/>
         <InfoButton name='more info' />
         <FavButton name='favorite'
-          onClick={() => dispatch(trackAdded(props.id))}
+          onClick={handleFavorite(dispatch, favorites, props.id)}
+          favorites={favorites}
+          trackId={props.id}
         />
       </ButtonContainer>
     </Container>
