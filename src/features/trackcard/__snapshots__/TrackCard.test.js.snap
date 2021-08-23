@@ -28,13 +28,13 @@ Object {
   margin-right: 1rem;
   border-radius: 18px;
   box-shadow: 1px 1px 5px 1px #FFFFA7;
-  background-color: #14213D;
+  background-color: #57287B;
 }
 
 .c1 {
   border-radius: 5px;
   border-width: 0.5px;
-  border-color: #FCA311;
+  border-color: #ADADAD;
   border-style: solid;
 }
 
@@ -78,17 +78,25 @@ Object {
   height: 3.4rem;
   width: 4.7rem;
   padding-right: 10px;
-  background-color: #2D4B8B;
+  background-color: #8D46C3;
   background-repeat: no-repeat;
   background-position: center;
   border-style: solid;
   border-radius: 5px;
   border-width: 1px;
-  border-color: #FCA311;
+  border-color: #ADADAD;
 }
 
 .c5 {
   background-image: url(play.png);
+}
+
+.c6 {
+  background-image: url(info.png);
+}
+
+.c7 {
+  background-image: url(favorite.png);
 }
 
 <body>
@@ -125,11 +133,11 @@ Object {
             name="play/pause"
           />
           <button
-            class="c4"
+            class="c4 c6"
             name="more info"
           />
           <button
-            class="c4"
+            class="c4 c7"
             name="favorite"
           />
         </div>
@@ -138,12 +146,12 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdnxRM jHgyFr"
+      class="sc-bdnxRM ljJkSb"
       role="listitem"
     >
       <img
         alt="Album cover"
-        class="sc-gtsrHT bfbqIY"
+        class="sc-gtsrHT kFHzXe"
         src="https://api.deezer.com/album/234349272/image"
       />
       <div
@@ -165,15 +173,15 @@ Object {
         class="sc-hKFxyN MeTXB"
       >
         <button
-          class="sc-eCApnc sc-jSFjdj ivfXAQ crPzXw"
+          class="sc-eCApnc sc-jSFjdj hRszFO crPzXw"
           name="play/pause"
         />
         <button
-          class="sc-eCApnc ivfXAQ"
+          class="sc-eCApnc sc-gKAaRy hRszFO EsHVq"
           name="more info"
         />
         <button
-          class="sc-eCApnc ivfXAQ"
+          class="sc-eCApnc sc-iCoGMd hRszFO VtWnw"
           name="favorite"
         />
       </div>
