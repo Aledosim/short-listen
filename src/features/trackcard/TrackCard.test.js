@@ -1,19 +1,23 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
+import { Provider } from 'react-redux'
 
-import TrackCard, {songTime} from './TrackCard'
+import { store } from '../../app/store'
+import TrackCard, { songTime } from './TrackCard'
 
 function testRender() {
     return render(
-      <TrackCard
-        cover="https://api.deezer.com/album/234349272/image"
-        title="Meu Pedaço de Pecado"
-        singer="João Gomes"
-        time={157}
-        preview="https://cdns-preview-7.dzcdn.net/stream/c-70255a40b7c438c3239e94ba0c909128-3.mp3"
-        link="https://www.deezer.com/track/1391349252"
-        id={1391349252}
-      />
+      <Provider store={store}>
+        <TrackCard
+          cover="https://api.deezer.com/album/234349272/image"
+          title="Meu Pedaço de Pecado"
+          singer="João Gomes"
+          time={157}
+          preview="https://cdns-preview-7.dzcdn.net/stream/c-70255a40b7c438c3239e94ba0c909128-3.mp3"
+          link="https://www.deezer.com/track/1391349252"
+          id={1391349252}
+        />
+      </Provider>
     )
 }
 
