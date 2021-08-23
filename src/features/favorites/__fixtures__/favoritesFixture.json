@@ -1,0 +1,92 @@
+  [
+    {
+      "cover": "https://api.deezer.com/album/234349272/image",
+      "title": "Meu Pedaço de Pecado",
+      "singer": "João Gomes",
+      "time": 157,
+      "preview": "https://cdns-preview-7.dzcdn.net/stream/c-70255a40b7c438c3239e94ba0c909128-3.mp3",
+      "link": "https://www.deezer.com/track/1391349252",
+      "id": 1391349252
+    },
+    {
+      "cover": "https://api.deezer.com/album/248346272/image",
+      "title": "Arranhão (Ao Vivo)",
+      "singer": "Henrique & Juliano",
+      "time": 153,
+      "preview": "https://cdns-preview-7.dzcdn.net/stream/c-7a0cbcd2ee3363ace2cd26c4e0fe9c2d-4.mp3",
+      "link": "https://www.deezer.com/track/1450292592",
+      "id": 1450292592
+    },
+    {
+      "cover": "https://api.deezer.com/album/207458032/image",
+      "title": "Baby Me Atende",
+      "singer": "Matheus Fernandes",
+      "time": 225,
+      "preview": "https://cdns-preview-5.dzcdn.net/stream/c-553433e74ce6e98a172c93c013361627-3.mp3",
+      "link": "https://www.deezer.com/track/1243010562",
+      "id": 1243010562
+    },
+    {
+      "cover": "https://api.deezer.com/album/248550452/image",
+      "title": "Quer Voar",
+      "singer": "Matuê",
+      "time": 187,
+      "preview": "https://cdns-preview-0.dzcdn.net/stream/c-079cf195cc5a22d08269bd95ffc4e2e2-3.mp3",
+      "link": 	"https://www.deezer.com/track/1451144022",
+      "id": 1451144022
+    },
+    {
+      "cover": "https://api.deezer.com/album/246523402/image",
+      "title": "Rolê",
+      "singer": "Tarcísio do Acordeon",
+      "time": 174,
+      "preview": "https://cdns-preview-f.dzcdn.net/stream/c-f6bf603194f05469680cf4240641fb21-3.mp3",
+      "link": "https://www.deezer.com/track/1442170372",
+      "id": 1442170372
+    },
+    {
+      "cover": "https://api.deezer.com/album/234349272/image",
+      "title": "Aquelas Coisas",
+      "singer": "João Gomes",
+      "time": 147,
+      "preview": "https://cdns-preview-0.dzcdn.net/stream/c-0b9b2db9244ca982c80142a2bccd7b2c-3.mp3",
+      "link": "https://www.deezer.com/track/1391349282",
+      "id": 1391349282
+    },
+    {
+      "cover": "https://api.deezer.com/album/235741762/image",
+      "title": "MORENA",
+      "singer": "Luan Santana",
+      "time": 193,
+      "preview": "https://cdns-preview-0.dzcdn.net/stream/c-029650b3975d7154fadfb718e1773f84-3.mp3",
+      "link": "https://www.deezer.com/track/1397354732",
+      "id": 1397354732
+    },
+    {
+      "cover": "https://api.deezer.com/album/237363182/image",
+      "title": "Se Joga no Passinho",
+      "singer": "Brisa Star",
+      "time": 200,
+      "preview": "https://cdns-preview-0.dzcdn.net/stream/c-0200f1c343a697cdd16d55a29c75bfb1-4.mp3",
+      "link": "https://www.deezer.com/track/1404805642",
+      "id": 1404805642
+    },
+    {
+      "cover": "https://api.deezer.com/album/235704972/image",
+      "title": "Ficha Limpa",
+      "singer": "Gusttavo Lima",
+      "time": 192,
+      "preview": "https://cdns-preview-1.dzcdn.net/stream/c-1a227d91a0177bd6e3756f4b369056c7-3.mp3",
+      "link": "https://www.deezer.com/track/1397165102",
+      "id": 1397165102
+    },
+    {
+      "cover": "https://api.deezer.com/album/234346602/image",
+      "title": "Se For Amor",
+      "singer": "João Gomes",
+      "time": 239,
+      "preview": "https://cdns-preview-d.dzcdn.net/stream/c-d471dd85a4f2c9a6436e909ff2f167a7-3.mp3",
+      "link": "https://www.deezer.com/track/1391338992",
+      "id": 1391338992
+    }
+  ]
