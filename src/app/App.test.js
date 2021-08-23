@@ -12,8 +12,11 @@ function testRender() {
   )
 }
 
-it('renders without crashing', async () => {
-  const tree = testRender()
+describe('App', () => {
 
-  expect(tree).toMatchSnapshot()
+  it('renders without crashing', () => {
+    const tree = testRender()
+
+    expect(tree).toMatchSnapshot()
+  })
 })
