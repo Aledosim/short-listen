@@ -5,6 +5,7 @@ import style from 'styled-components'
 
 import { ReactComponent as Logo } from './images/deezer_logo.svg'
 import searchIcon from './images/search_icon.svg'
+import favoritesIcon from './images/favorites.png'
 
 import { searchedTerm } from '../tracklist/trackListSlice'
 import { changedToFavorites } from '../../app/appSlice'
@@ -69,6 +70,19 @@ const Button = style.button`
   color: #9B9B9B;
 `
 
+const FavButton = style.button`
+  height: 3rem;
+  width: 3rem;
+  border: none;
+
+  margin-top: 0.5rem;
+  margin-right: 2.5rem;
+
+  background-repeat: no-repeat;
+  background-color: #0A0A0A;
+  background-image: url(${favoritesIcon});
+`
+
 export function search(dispatch) {
   const innerSearch = (event) => {
     const searchField  = document.getElementById('searchField')
@@ -104,7 +118,8 @@ export default function TopBar(){
           data-cy='searchButton'
         />
       </Form>
-      <button name='favorites'
+      <FavButton
+        name='favorites'
         type='button'
         onClick={() => {dispatch(changedToFavorites())}}
       />
