@@ -5,12 +5,12 @@
 
 <br />
 <p align="center">
-  <h3 align="center">Short Listen</h3>
+  <h1 align="center">Short Listen</h1>
 
   <p align="center">
     A small project to navigate the songs of Deezer
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://short-listen.vercel.app/">View Demo</a>
   </p>
 </p>
 
@@ -42,7 +42,7 @@
 
 ## About The Project
 This is a one page application that shows you the most played musics of Deezer. It allows you to search the catalog and save your favorite ones in a list. The list isn't persistent and it don't play the previews of the musics yet.
-You can check live [here]().
+You can check live [here](https://short-listen.vercel.app/).
 
 ### Built With
 * [React](https://reactjs.org/)
@@ -110,7 +110,7 @@ Right now in love with Styled Components.
 - A more robust API client
 - Better interface design
 
-[codecov-shield]: https://codecov.io/gh/Aledosim/short-listen/branch/master/graph/badge.svg
+[codecov-shield]: https://codecov.io/gh/Aledosim/short-listen/branch/master/graph/badge.svg?token=jQkWguDnTm
 [codecov-url]: https://codecov.io/gh/Aledosim/short-listen
 [cypress-shield]: https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/xctxsj/master&style=flat&logo=cypress
 [cypress-url]: https://dashboard.cypress.io/projects/xctxsj/runs
