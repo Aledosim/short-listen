@@ -28,7 +28,7 @@ Object {
   position: relative;
   margin: auto;
   width: 30rem;
-  height: 3rem;
+  height: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -176,7 +176,7 @@ Object {
       class="sc-iqAclL dBXivQ"
     >
       <header
-        class="sc-bdnxRM dtpuxP"
+        class="sc-bdnxRM looujR"
         data-cy="topbar"
       >
         <svg
@@ -185,7 +185,7 @@ Object {
           deezer_logo.svg
         </svg>
         <form
-          class="sc-dlnjwi gSWzLL"
+          class="sc-dlnjwi jYCUyy"
         >
           <input
             autocomplete="on"
