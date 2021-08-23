@@ -8,13 +8,12 @@ export const appSlice = createSlice({
   name: 'app',
   initialState,
   reducers: {
-    changedToFavorites: (state) => {
-      console.log('mudando para favoritos')
-      state.value = 'favorites'},
+    changedToFavorites: (state) => {state.value = 'favorites'},
+    changedToTrackList: (state) => {state.value = 'trackList'},
   },
 })
 
-export const { changedToFavorites } = appSlice.actions
+export const { changedToFavorites, changedToTrackList } = appSlice.actions
 
 export const selectView = (state) => state.app.value
 
