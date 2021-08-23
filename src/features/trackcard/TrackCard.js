@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useDispatch } from 'react-redux'
+
+import { trackAdded } from '../favorites/favoritesSlice'
 
 import playIcon from './images/play/play.png'
 import infoIcon from './images/info/info.png'
@@ -96,19 +99,22 @@ const FavButton = styled(Button)`
 `
 
 export default function TrackCard(props){
+  const dispatch = useDispatch()
 
   return(
     <Container role="listitem">
       <Img alt="Album cover" src={props.cover} />
       <Info>
-        <div>{props.title}</div>
+        <div data-cy="trackTitle">{props.title}</div>
         <div data-cy="artistName">{props.singer}</div>
         <div>{songTime(props.time)}</div>
       </Info>
       <ButtonContainer>
         <PlayPauseButton name='play/pause' icon={playIcon}/>
         <InfoButton name='more info' />
-        <FavButton name='favorite' />
+        <FavButton name='favorite'
+          onClick={() => dispatch(trackAdded(props.id))}
+        />
       </ButtonContainer>
     </Container>
   );
