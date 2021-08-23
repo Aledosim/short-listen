@@ -1,8 +1,10 @@
 import React from 'react';
 import style, { createGlobalStyle } from 'styled-components';
+import { useSelector } from 'react-redux'
 
 import TopBar from '../features/topbar/TopBar'
 import TrackList from '../features/tracklist/TrackList'
+import { selectView } from './appSlice'
 
 // colors
 const background = "#0A0A0A"
