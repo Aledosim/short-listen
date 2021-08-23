@@ -22,7 +22,7 @@ jobs:
       
     - name: Generate coverage report
       run: |
-        npm run coverage -- --watchAll=false
+        npm test -- --coverage --watchAll=false
         
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
