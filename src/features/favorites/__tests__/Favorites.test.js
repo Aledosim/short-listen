@@ -43,7 +43,7 @@ jest.mock("../../trackcard/TrackCard", () => {
   }
 })
 
-describe('<TrackList /> tests', () => {
+describe('<Favorites /> tests', () => {
 
   it('renders without crashing', async () => {
     const tree = testRender()
