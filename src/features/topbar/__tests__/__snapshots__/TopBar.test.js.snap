@@ -80,6 +80,17 @@ Object {
   color: #9B9B9B;
 }
 
+.c5 {
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  margin-top: 0.5rem;
+  margin-right: 2.5rem;
+  background-repeat: no-repeat;
+  background-color: #0A0A0A;
+  background-image: url(favorites.png);
+}
+
 <body>
     <div>
       <header
@@ -110,6 +121,7 @@ Object {
           />
         </form>
         <button
+          class="c5"
           name="favorites"
           type="button"
         />
@@ -145,6 +157,7 @@ Object {
         />
       </form>
       <button
+        class="sc-jSFjdj djZZFR"
         name="favorites"
         type="button"
       />

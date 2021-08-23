@@ -80,7 +80,18 @@ Object {
   color: #9B9B9B;
 }
 
-.c7 {
+.c6 {
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  margin-top: 0.5rem;
+  margin-right: 2.5rem;
+  background-repeat: no-repeat;
+  background-color: #0A0A0A;
+  background-image: url(favorites.png);
+}
+
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,7 +113,7 @@ Object {
   background-color: #0A0A0A;
 }
 
-.c6 {
+.c7 {
   position: relative;
   top: 4.5rem;
 }
@@ -148,13 +159,14 @@ Object {
             />
           </form>
           <button
+            class="c6"
             name="favorites"
             type="button"
           />
         </header>
       </header>
       <div
-        class="c6"
+        class="c7"
       >
         <div
           role="list"
@@ -163,7 +175,7 @@ Object {
             class="infinite-scroll-component__outerdiv"
           >
             <div
-              class="infinite-scroll-component c7"
+              class="infinite-scroll-component c8"
               style="height: auto; overflow: auto;"
             >
               <h4>
@@ -177,7 +189,7 @@ Object {
   </body>,
   "container": <div>
     <header
-      class="sc-bqGGPW jsYfVK"
+      class="sc-fnVZcZ lgTYX"
     >
       <header
         class="sc-bdnxRM looujR"
@@ -207,13 +219,14 @@ Object {
           />
         </form>
         <button
+          class="sc-jSFjdj djZZFR"
           name="favorites"
           type="button"
         />
       </header>
     </header>
     <div
-      class="sc-ksluID iZYHvx"
+      class="sc-fFSPTT eYJaGe"
     >
       <div
         role="list"
@@ -222,7 +235,7 @@ Object {
           class="infinite-scroll-component__outerdiv"
         >
           <div
-            class="infinite-scroll-component sc-crzoAE biPuQf"
+            class="infinite-scroll-component sc-dIsUp iIkpDc"
             style="height: auto; overflow: auto;"
           >
             <h4>

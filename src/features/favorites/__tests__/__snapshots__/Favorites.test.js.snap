@@ -3,7 +3,7 @@
 exports[`<Favorites /> tests renders without crashing 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": .c0 {
+  "baseElement": .c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,10 +18,40 @@ Object {
   color: #EBEBEB;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 2.5rem;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+}
+
+.c1 {
+  height: 3rem;
+  width: 4rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  background-color: #0A0A0A;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(chart.png);
+  border: none;
+}
+
 <body>
     <div>
-      <header>
+      <header
+        class="c0"
+      >
         <button
+          class="c1"
           name="track list"
         />
       </header>
@@ -32,7 +62,7 @@ Object {
           class="infinite-scroll-component__outerdiv"
         >
           <div
-            class="infinite-scroll-component c0"
+            class="infinite-scroll-component c2"
             style="height: auto; overflow: auto;"
           >
             <p
@@ -48,8 +78,11 @@ Object {
     </div>
   </body>,
   "container": <div>
-    <header>
+    <header
+      class="sc-gtsrHT jEdsib"
+    >
       <button
+        class="sc-dlnjwi jVngMY"
         name="track list"
       />
     </header>

@@ -137,6 +137,7 @@ Object {
           <button
             class="c4 c6"
             name="more info"
+            type="button"
           />
           <button
             class="c4 c7"
@@ -183,6 +184,7 @@ Object {
         <button
           class="sc-eCApnc sc-gKAaRy hRszFO EsHVq"
           name="more info"
+          type="button"
         />
         <button
           class="sc-eCApnc sc-iCoGMd hRszFO VtWnw"
