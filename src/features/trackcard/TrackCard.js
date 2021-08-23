@@ -13,11 +13,11 @@ export function songTime(totalTime) {
 }
 
 // color definitions
-const background = "#14213D"
+const background = "#57287B"
 const text = "#E5E5E5"
-const buttonColor = "#2D4B8B"
+const buttonColor = "#8D46C3"
 const margin = "#FFFFA7"
-const border = "#FCA311"
+const border = "#ADADAD"
 
 const Container = styled.div`
   width: 35rem;
