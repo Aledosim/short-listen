@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders without crashing 1`] = `
+exports[`App renders without crashing 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .c1 {
@@ -147,6 +147,10 @@ Object {
               type="submit"
             />
           </form>
+          <button
+            name="favorites"
+            type="button"
+          />
         </header>
       </header>
       <div
@@ -173,7 +177,7 @@ Object {
   </body>,
   "container": <div>
     <header
-      class="sc-dIsUp bQxFdd"
+      class="sc-bqGGPW jsYfVK"
     >
       <header
         class="sc-bdnxRM looujR"
@@ -202,10 +206,14 @@ Object {
             type="submit"
           />
         </form>
+        <button
+          name="favorites"
+          type="button"
+        />
       </header>
     </header>
     <div
-      class="sc-bqGGPW rovGd"
+      class="sc-ksluID iZYHvx"
     >
       <div
         role="list"
