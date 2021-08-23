@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import style from 'styled-components'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -7,6 +8,8 @@ import { selectFavorites } from './favoritesSlice'
 import { selectTrackList } from '../tracklist/trackListSlice'
 import TrackCard from '../trackcard/TrackCard'
 import { changedToTrackList } from '../../app/appSlice'
+
+import chartIcon from './chart.png'
 
 // colors
 const text = "#EBEBEB"
@@ -19,6 +22,31 @@ const StyledInfiniteScroll = styled(InfiniteScroll)`
   color: ${text};
 `
 
+const Header = style.header`
+  display: flex;
+  justify-content: flex-end;
+
+  height: 2.5rem;
+  width: 100%;
+  z-index: 1;
+
+  position: fixed;
+`
+const Button = style.button`
+  height: 3rem;
+  width: 4rem;
+
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+
+	background-color: #0A0A0A;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(${chartIcon});
+
+	border: none;
+`
+
 export default function Favorites(){
 
   const favorites = useSelector(selectFavorites)
@@ -27,11 +55,12 @@ export default function Favorites(){
 
   return(
     <>
-      <header>
-        <button name='track list'
+      <Header>
+        <Button
+          name='track list'
           onClick={() => dispatch(changedToTrackList())}
         />
-      </header>
+      </Header>
       <div role="list">
         <StyledInfiniteScroll
           hasMore={false}
