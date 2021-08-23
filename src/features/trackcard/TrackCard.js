@@ -125,8 +125,15 @@ export default function TrackCard(props){
         <div>{songTime(props.time)}</div>
       </Info>
       <ButtonContainer>
-        <PlayPauseButton name='play/pause' icon={playIcon}/>
-        <InfoButton name='more info' />
+        <PlayPauseButton
+          name='play/pause'
+          icon={playIcon}
+        />
+        <InfoButton
+          name='more info'
+          type='button'
+          onClick={() => window.open(props.link)}
+        />
         <FavButton name='favorite'
           onClick={handleFavorite(dispatch, favorites, props.id)}
           favorites={favorites}
