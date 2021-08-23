@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 
 import { store } from '../../../app/store'
 import Favorites from '../Favorites'
+import * as trackListFixture from '../../tracklist/__fixtures__/trackListFixture.json'
 import * as favoritesFixture from '../__fixtures__/favoritesFixture.json'
 import * as reactreduxModule from 'react-redux'
 
@@ -52,8 +53,23 @@ describe('<Favorites /> tests', () => {
   })
 
   it('should contain a list of tracks', async () => {
+    fail("I could not mock this function in time")
+
+    const selectFavoritesMock = jest.mock('../favoritesSlice', () => {
+      return {
+        __esModule: true,
+        selectFavorites: 'selectFavorites'
+      }
+    })
+
     jest.spyOn(reactreduxModule, 'useSelector')
-      .mockImplementation(() => favoritesFixture.default)
+      .mockImplementation((arg) => {
+        if(arg === 'selectFavorites'){
+          return favoritesFixture.default
+        } else if(arg === 'selectTrackList') {
+          return trackListFixture.default
+        }
+      })
 
     testRender()
 
