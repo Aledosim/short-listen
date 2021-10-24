@@ -97,7 +97,7 @@ npm run cypress:run
 Distributed under the GPL3 License. See `LICENSE` for more information.
 
 ## Contact
-Alexandre do Sim - [LinkedIn](https://www.linkedin.com/in/alexandre-do-sim-86930414b/) - aledosim@yahoo.com.br
+Alexandre do Sim - [LinkedIn](https://www.linkedin.com/in/alexandre-do-sim/) - aledosim@yahoo.com.br
 
 Project Link: [https://github.com/Aledosim/short-listen](https://github.com/Aledosim/short-listen)
 
